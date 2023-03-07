@@ -1,0 +1,246 @@
+package BT_Lab2;
+
+import java.util.Scanner;
+
+public class BT_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        float a, b;
+        System.out.print("Nhap vao so a: ");
+        a = sc.nextInt();
+        System.out.print("Nhap vao so b: ");
+        b = sc.nextInt();
+
+        System.out.println("---------------------------------");
+
+        float tong = a + b;
+        float hieu = a - b;
+        float tich = a * b;
+
+        System.out.println("Tong cua hai so la: " + tong);
+        System.out.println("Hieu cua hai so la: " + hieu);
+        System.out.println("Tich cua hai so la: " + tich);
+
+        if (b != 0) {
+            float thuong = a / b;
+            float du = a % b;
+
+            System.out.println("Thuong cua hai so la: " + thuong);
+            System.out.println("Chia lay du cua hai so la: " + du);
+
+        } else
+            System.out.println("Khong the chia cho 0");
+
+        System.out.println("---------------------------------");
+
+        System.out.println("a == b: " + (a == b));
+        System.out.println("a != b: " + (a != b));
+        System.out.println("a >= b: " + (a >= b));
+        System.out.println("a <= b: " + (a <= b));
+        System.out.println("a > b: " + (a > b));
+        System.out.println("a < b: " + (a < b));
+    }
+}
+ 18  
+BT_Lab2/BT_2.java
+@@ -0,0 +1,18 @@
+package BT_Lab2;
+
+import java.util.Scanner;
+
+public class BT_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap vao mot so nguyen: ");
+        int n = sc.nextInt();
+
+        if (n % 2 == 0) {
+            System.out.println("So " + n + " la so chan");
+        } else {
+            System.out.println("So " + n + " la so le");
+        }
+    }
+}
+ 24  
+BT_Lab2/BT_3.java
+@@ -0,0 +1,24 @@
+package BT_Lab2;
+
+import java.util.Scanner;
+
+public class BT_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap vao ten cua ban: ");
+        String name = sc.nextLine();
+        System.out.print("Nhap vao nam sinh cua ban: ");
+        int year = sc.nextInt();
+
+        int age = 2023 - year;
+
+        if (age >= 18) {
+            System.out.println("Ban " + name + " da gia");
+        } else if (age >= 16) {
+            System.out.println("Ban " + name + " o do tuoi truong thanh");
+        } else {
+            System.out.println("Ban " + name + " o do tuoi vi thanh nien");
+        }
+    }
+}
+ 57  
+BT_Lab2/BT_4.java
+@@ -0,0 +1,57 @@
+package BT_Lab2;
+
+import java.util.Scanner;
+
+public class BT_4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap vao so nguyen tu 1 - 12:");
+        int n = sc.nextInt();
+
+        String name;
+        switch (n) {
+            case 1:
+                name = "Thang Mot";
+                break;
+            case 2:
+                name = "Thang Hai";
+                break;
+            case 3:
+                name = "Thang Ba";
+                break;
+            case 4:
+                name = "Thang Tu";
+                break;
+            case 5:
+                name = "Thang Nam";
+                break;
+            case 6:
+                name = "Thang Sau";
+                break;
+            case 7:
+                name = "Thang Bay";
+                break;
+            case 8:
+                name = "Thang Tam";
+                break;
+            case 9:
+                name = "Thang Chin";
+                break;
+            case 10:
+                name = "Thang Muoi";
+                break;
+            case 11:
+                name = "Thang Muoi Mot";
+                break;
+            case 12:
+                name = "Thang Muoi Hai";
+                break;
+            default: // nếu số không hợp lệ thì gán name là rỗng
+                name = "So khong hop le";
+        }
+
+        System.out.println(name);
+    }
+
+}
+ 19  
+BT_Lab2/BT_5.java
+@@ -0,0 +1,19 @@
+package BT_Lab2;
+
+import java.util.Scanner;
+
+public class BT_5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        while (true) {
+            System.out.print("Nhap mot so nguyen: ");
+            int num = sc.nextInt();
+            sum += num;
+            if (sum > 100) {
+                break;
+            }
+        }
+        System.out.println("Tong cac so da nhap la: " + sum);
+    }
+}
+ 22  
+BT_Lab2/BT_6.java
+@@ -0,0 +1,22 @@
+package BT_Lab2;
+
+import java.util.Scanner;
+
+public class BT_6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num;
+
+        do {
+            System.out.print("Nhap vao mot so nguyen duong: ");
+            num = sc.nextInt();
+        } while (num <= 0);
+
+        int factorial = 1;
+        for (int i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        System.out.println("Giai thua cua " + num + " la: " + factorial);
+    }
+}
+ 9  
+BT_Lab2/BT_7.java
+@@ -0,0 +1,9 @@
+package BT_Lab2;
+
+public class BT_7 {
+    public static void main(String[] args) {
+        for (int num = 1; num <= 20; num++) {
+            System.out.println(num);
+        }
+    }
+}
+ 32  
+BT_Lab2/BT_8.java
+@@ -0,0 +1,32 @@
+package BT_Lab2;
+
+import java.util.Scanner;
+
+public class BT_8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n;
+        float sum = 0;
+        float average;
+
+        do {
+            System.out.print("Ban muon tinh trung binh cua bao nhieu so: ");
+            n = sc.nextInt();
+            if (n <= 0) {
+                System.out.println("Vui long nhap mot so nguyen duong!");
+            }
+        } while (n <= 0);
+
+        float[] array = new float[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Nhap so thu " + (i + 1) + " :");
+            array[i] = sc.nextFloat();
+            sum += array[i];
+        }
+
+        average = sum / n;
+        System.out.println("Trung binh cong cua " + n + " so ban da nhap la: " + average);
+    }
+}
